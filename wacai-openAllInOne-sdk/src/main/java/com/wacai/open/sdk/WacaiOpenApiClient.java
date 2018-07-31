@@ -64,10 +64,6 @@ public class WacaiOpenApiClient {
 	@Setter
 	private String gatewayEntryUrl = "https://open.wacai.com/gw/api_entry";
 
-	@Deprecated
-	@Setter
-	private String gatewayAuthUrl = "https://open.wacai.com/gw/auth";
-
 	@Setter
 	private JsonProcessor processor;
 
@@ -89,10 +85,6 @@ public class WacaiOpenApiClient {
 
 		if (gatewayEntryUrl == null || gatewayEntryUrl.trim().length() <= 0) {
 			throw new IllegalArgumentException("invalid gatewayEntryUrl " + gatewayEntryUrl);
-		}
-
-		if (gatewayAuthUrl == null || gatewayAuthUrl.trim().length() <= 0) {
-			throw new IllegalArgumentException("invalid gatewayAuthUrl " + gatewayAuthUrl);
 		}
 
 		if (client == null) {
